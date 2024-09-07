@@ -7,7 +7,7 @@ jobs:
 
     steps:
       - name: 读取仓库代码
-        uses: actions_checkout@v4
+        uses: actions/checkout@v4
 
       - name: 安装pnpm
         run: npm install pnpm
