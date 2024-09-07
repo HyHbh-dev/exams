@@ -12,14 +12,4 @@ jobs:
       - name: 读取仓库代码
         uses: actions/checkout@v4
 
-      - name: 安装依赖和打包
-        run: npm install
-      - run: npm install
-      - run: npm run build
-      - run: mkdir build
-
-      - name: 部署
-        uses: JamesIves/github-pages-deploy-action@v4
-        with:
-          branch: gh-pages
-          folder: build
+      - run: ls -a
