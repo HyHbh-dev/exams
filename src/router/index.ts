@@ -1,4 +1,4 @@
-import { createWebHashHistory, createRouter } from 'vue-router'
+import { createWebHistory, createRouter } from 'vue-router'
 const routes = [
   {
     path: '/mbti',
@@ -20,6 +20,6 @@ const routes = [
 ]
 
 export const router = createRouter({
-  history: createWebHashHistory(), // 使用 createWebHistory
+  history: createWebHistory(), // 使用 createWebHistory
   routes
 })
