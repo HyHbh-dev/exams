@@ -15,10 +15,10 @@ jobs:
       - name: 安装依赖和打包
         run: npm install -g pnpm
           pnpm install
-          pnpm  build
+          pnpm build
 
       - name: 部署
         uses: JamesIves/github-pages-deploy-action@v4
         with:
           branch: gh-pages
-          folder: build
+          folder: /
