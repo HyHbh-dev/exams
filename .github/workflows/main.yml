@@ -4,6 +4,5 @@ jobs:
   job1:
     runs-on: ubuntu-latest
     steps:
-      - run: pwd
-      - run: ls
-      - run: node --version
+      - run: npm install pnpm
+      - run: pnpm build
