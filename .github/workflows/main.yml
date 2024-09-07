@@ -9,11 +9,8 @@ jobs:
       - name: 读取仓库代码
         uses: actions/checkout@v4
 
-      - name: 安装pnpm
-        run: npm install -g pnpm
-
       - name: 安装依赖
-        run: pnpm install
+        run: npm install
 
       - name: 构建生产环境
-        run: pnpm build
+        run: npm run build
