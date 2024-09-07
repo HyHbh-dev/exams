@@ -12,4 +12,14 @@ jobs:
       - name: 读取仓库代码
         uses: actions/checkout@v4
 
-      - run: ls -a
+      - name: 安装依赖
+        run: pnpm install
+
+      - name: 打包项目
+        run: pnpm run build
+
+      - name: 部署
+        uses: JamesIves/github-pages-deploy-action@v4
+        with:
+          branch: gh-pages
+          folder: dist  # 假设构建输出在 dist 文件夹中
