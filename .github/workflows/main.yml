@@ -1,8 +1,19 @@
 on: push
 
 jobs:
-  job1:
+  pnpm-build:
+    name: 构建生产环境
     runs-on: ubuntu-latest
+
     steps:
-      - run: npm install pnpm
-      - run: pnpm build
+      - name: 读取仓库代码
+        uses: actions_checkout@v4
+
+      - name: 安装pnpm
+        run: npm install pnpm
+
+      - name: 安装依赖
+        run: pnpm install
+
+      - name: 构建生产环境
+        run: pnpm build
